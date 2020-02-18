@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+# Easier navigation: .., ..., ...., ....., ~ and -
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ~="cd ~" # `cd` is probably faster to type though
+
+# git
+alias g="git"
+alias gi='git init'
+alias gs="git status"
+alias ga="git add . "
+alias gc="git commit"
+
+
+# nom
+alias nr='npm run'
+alias ni='npm install'
+alias nid='npm install -D'
+
+# Print each PATH entry on a separate line
+alias path='echo -e ${PATH//:/\\n}'
+
+# python 3
+alias python='python3'
+
+# open with TextEdit
+alias open='open -a TextEdit'

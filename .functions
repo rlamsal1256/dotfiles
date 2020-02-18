@@ -1,0 +1,17 @@
+# touch and open a file
+to()
+{
+  touch $1
+  open $1
+}
+
+# Create a new directory and enter it
+function mkd() { 
+    mkdir -p "$@" && cd "$_";
+}
+
+# git add, commit and push
+function gacp() {
+     git add . && git commit -am "$1" && git push
+}
+
