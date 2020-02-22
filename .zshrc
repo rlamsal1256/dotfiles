@@ -9,6 +9,8 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/rlamsal/.oh-my-zsh"
 
+export TERM="xterm-256color"
+
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
 # Set name of the theme to load --- if set to "random", it will

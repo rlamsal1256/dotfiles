@@ -10,8 +10,13 @@ function mkd() {
     mkdir -p "$@" && cd "$_";
 }
 
-# git add, commit and push
+# git commit
+function gc() {
+     git add . && git commit -am "$1"
+}
+
+# git commit and push
 function gacp() {
-     git add . && git commit -am "$1" && git push
+     git add . && git commit -m "$1" && git push
 }
 

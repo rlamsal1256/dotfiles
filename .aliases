@@ -9,11 +9,6 @@ alias ~="cd ~" # `cd` is probably faster to type though
 
 # git
 alias g="git"
-alias gi='git init'
-alias gs="git status"
-alias ga="git add . "
-alias gc="git commit"
-
 
 # nom
 alias nr='npm run'
