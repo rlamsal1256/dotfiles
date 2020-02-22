@@ -9,6 +9,15 @@ alias ~="cd ~" # `cd` is probably faster to type though
 
 # git
 alias g="git"
+alias gi="git init"
+alias gs="git status"
+alias gc="git add -A && git commit -av"
+alias gco="git checkout -b "$1""
+alias gca="git commit --amend"
+alias gri= "git rebase -i "$1""
+alias gpf="git push --force"
+alias gsp="git stash pop"
+alias gsa="git stash apply"
 
 # nom
 alias nr='npm run'

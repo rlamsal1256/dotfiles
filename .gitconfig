@@ -1,21 +1,4 @@
 [alias]
-	i = init
-
-	# View the current working tree status
-	s = status
-
-
-	# Pull in remote changes for the current repository and all its submodules
-	p = git pull --recurse-submodules
-
-	# Clone a repository including all submodules
-	c = clone --recursive
-
-	# Commit all changes
-	ca = !git add -A && git commit -av
-
-	# Switch to a branch, creating it if necessary
-	go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
 
 	# Show verbose output about tags, branches or remotes
 	tags = tag -l
@@ -25,20 +8,6 @@
 	# List aliases
 	aliases = config --get-regexp alias
 
-	# Amend the currently staged files to the latest commit
-	amend = commit --amend --reuse-message=HEAD
-
-	# Interactive rebase with the given number of latest commits
-	ri = "!r() { git rebase -i HEAD~$1; }; r"
-
-	# Force push
-	pf = push --force
-
-	# Stash pop
-	sp = stash pop
-
-	# Stash apply
-	sa = stash apply
 
 	# Remove branches that have already been merged with master
 	# a.k.a. ‘delete merged’
