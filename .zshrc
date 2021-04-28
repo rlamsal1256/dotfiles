@@ -69,13 +69,23 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PATH=/usr/local/Cellar/gnu-getopt/2.36/bin:$PATH
 
-export JAVA_HOME=$(/usr/libexec/java_home)
+# export JAVA_HOME=$(/usr/libexec/java_home)
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/amazon-corretto-8.jdk/Contents/Home
 
 export PATH=/usr/local/opt/make/libexec/gnubin:$PATH
 export PATH=/usr/local/Cellar/diffutils/3.7/bin:$PATH
 
 # Maven
-export MVN=/Users/rlamsal/apache-maven-3.6.3
-export PATH=$HOME/bin:/usr/local/bin:$PATH:$MVN/bin:/usr/local/go/bin
+export M2_HOME=/usr/local/Cellar/apache-maven-3.6.3
+export PATH=$M2_HOME/bin:$PATH
 
+# jenv
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
 
+#direnv
+eval "$(direnv hook zsh)"
+
+# export LIBRARY_PATH=$LIBRARY_PATH:/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/lib
+
+. /usr/local/opt/asdf/asdf.sh
