@@ -1,17 +1,10 @@
 [alias]
-
-	# Show verbose output about tags, branches or remotes
-	tags = tag -l
-	branches = branch -a
-	remotes = remote -v
-
-	# List aliases
-	aliases = config --get-regexp alias
-
-
-	# Remove branches that have already been merged with master
-	# a.k.a. ‘delete merged’
-	dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+	st = status
+	co = checkout
+	ci = commit -a
+	ca = commit -a --amend
+	rb = rebase
+	pf = push --force
 
 
 	# Show the user email for the current repository.
