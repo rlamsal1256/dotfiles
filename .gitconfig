@@ -3,20 +3,19 @@
 	co = checkout
 	ci = commit -a
 	ca = commit -a --amend
-	rb = rebase
-	pf = push --force
-
-
+	rb = "!f() { if [ $# -eq 0 ]; then set -- origin/main; git fetch origin main; fi && git rebase \"$@\"; }; f"
+	rc = rebase --continue
+	ri = "!f() { if [ $# -eq 0 ]; then set -- origin/main; fi; git rebase --interactive --keep-base \"$@\"; }; f"
+	pf = push --force-with-lease
 	# Show the user email for the current repository.
 	whoami = config user.email
-
 
 [core]
 	editor = code --wait
 
 	# Use custom `.gitignore` and `.gitattributes`
 	excludesfile = ~/.gitignore
-	
+
 
 [color]
 
@@ -46,3 +45,20 @@
 [user]
 	name = Rupak Lamsal
 	email = rlamsal@wpi.edu
+[push]
+	autoSetupRemote = true
+[rebase]
+	updateRefs = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[rerere]
+	enabled = true
+[column]
+	ui = auto
+[branch]
+	sort = -committerdate
+[maintenance]
+	repo = /Users/rlamsal/Projects/healthcasts/healthcasts-ai
